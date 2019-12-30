@@ -29,7 +29,7 @@ class Autoload
     public static function autoloader($class)
     {
         foreach (self::$auto_load as $namespace => $dir) {
-            if (mb_substr($class, 0, mb_strlen($namespace)) != $namespace) return;
+            if (mb_substr($class, 0, mb_strlen($namespace)) != $namespace) continue;
             self::require_file($dir . self::take_str_right($class, $namespace));
         }
     }
