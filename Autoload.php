@@ -21,6 +21,13 @@ class Autoload
         self::$auto_load[$namespace] = $dir;
     }
 
+    public static function add_common($file)
+    {
+        if (is_file(self::$root . $file)) {
+            require_once self::$root . $file;
+        }
+    }
+
     public static function remove($namespace)
     {
         unset(self::$auto_load[$namespace]);
