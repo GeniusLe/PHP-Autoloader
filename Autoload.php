@@ -11,9 +11,9 @@ class Autoload
 {
     private static $auto_load = [];
     private static $root  = __DIR__ . "/";
-    private static $error = true;
+    private static $error = false;
 
-    public static function set_error($bool = false)
+    public static function set_error($bool)
     {
         self::$error = $bool;
     }
