@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * php Autoload 
+ * 
+ * @github  https://github.com/GeniusLe/PHP-Autoloader
+ * @package Autoload
+ */
+
 class Autoload
 {
     private static $auto_load = [];
